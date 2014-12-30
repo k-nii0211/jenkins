@@ -1,6 +1,9 @@
 ---
 driver:
-  name: vagrant
+  name: docker
+  binary: docker 2>/dev/null
+  use_sudo: false
+  socket: <%= ENV['DOCKER_HOST'] %>
 
 provisioner:
   name: chef_zero
